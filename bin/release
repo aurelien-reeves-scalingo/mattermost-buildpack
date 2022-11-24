@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
+DB_URL=${DATABASE_URL/sslmode=prefer/sslmode=require}
+
 cat << EOF
 ---
 addons:
  - scalingo-postgresql
 config_vars:
   PATH: "/app/bin:/app/mattermost/bin:/usr/local/bin:/usr/bin:/bin"
+  MM_SQLSETTINGS_DATASOURCE: $DB_URL
+  DB_URL: $DB_URL
 default_process_types:
   web: /app/mattermost/bin/run
   postdeploy: /app/mattermost/bin/postdeploy
