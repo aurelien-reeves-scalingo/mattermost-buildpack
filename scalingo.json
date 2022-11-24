@@ -2,12 +2,12 @@
   "name": "Mattermost",
   "description": "Mattermost",
   "logo": "https://about.mattermost.com/wp-content/uploads/2017/08/Mattermost-Logo-Blue.svg",
-  "repository": "https://github.com/MTES-MCT/mattermost-scalingo",
+  "repository": "https://github.com/aurelien-reeves-scalingo/mattermost-buildpack",
   "website": "https://mattermost.com",
   "env": {
     "BUILDPACK_URL": {
       "description": "Buildpack used to deploy Mattermost",
-      "value": "https://github.com/MTES-MCT/mattermost-buildpack#main",
+      "value": "https://github.com/aurelien-reeves-scalingo/mattermost-buildpack#main",
       "required": true
     },
     "JQ_VERSION": {
@@ -38,11 +38,6 @@
     "MM_SQLSETTINGS_DRIVERNAME": {
       "description": "postgres or mysql addon",
       "value": "postgres",
-      "required": true
-    },
-    "MM_SQLSETTINGS_DATASOURCE": {
-      "description": "db url",
-      "value": "$SCALINGO_POSTGRESQL_URL",
       "required": true
     },
     "MM_CONFIG": {
