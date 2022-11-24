@@ -42,7 +42,7 @@
     },
     "MM_SQLSETTINGS_DATASOURCE": {
       "description": "db url",
-      "value": "$SCALINGO_POSTGRESQL_URL&sslmode=required",
+      "value": "$SCALINGO_POSTGRESQL_URL",
       "required": true
     },
     "MM_CONFIG": {
